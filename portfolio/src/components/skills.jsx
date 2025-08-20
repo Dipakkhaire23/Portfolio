@@ -1,6 +1,6 @@
 import React from "react";
-import { FaJava, FaJs, FaHtml5, FaCss3Alt, FaDocker, FaDatabase, FaReact, FaAndroid, FaGitAlt, FaLinux, FaAws } from "react-icons/fa";
-import { SiFlutter, SiMysql, SiFirebase, SiSpring, SiCplusplus, SiSpringboot } from "react-icons/si";
+import { FaJava, FaJs, FaHtml5, FaCss3Alt, FaDocker, FaDatabase, FaReact, FaAndroid, FaGitAlt, FaLinux, FaAws,FaCode  } from "react-icons/fa";
+import { SiFlutter, SiMysql, SiFirebase, SiSpring, SiCplusplus, SiSpringboot,SiDart,   } from "react-icons/si";
 import { motion } from "framer-motion";
 
 function About() {
@@ -17,6 +17,8 @@ function About() {
     { name: "Docker", icon: <FaDocker className="text-blue-400" /> },
     { name: "REST API", icon: <FaReact className="text-blue-500" /> },
     { name: "C++", icon: <SiCplusplus className="text-blue-500" /> },
+    { name: "Dart", icon: <SiDart className="text-blue-500" /> },
+  { name: "C", icon: <FaCode  className="text-blue-500" /> },
     { name: "DSA", icon: <FaDatabase className="text-gray-700" /> },
     { name: "Spring MVC", icon: <SiSpring className="text-green-600" /> },
     { name: "Backend Development", icon: <FaDatabase className="text-gray-700" /> },
@@ -27,25 +29,25 @@ function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-50 to-gray-100 flex flex-col px-6 md:px-20 py-10">
-      <h2 className="text-4xl font-bold mb-6 text-gray-800 text-center md:text-left">
+    <div className="flex flex-col min-h-screen px-6 py-10 bg-gradient-to-r from-gray-50 to-gray-100 md:px-20">
+      <h2 className="mb-6 text-4xl font-bold text-center text-gray-800 md:text-left">
         Skills
       </h2>
-      <p className="max-w-3xl mx-auto text-lg text-gray-600 mb-12 text-center md:text-left">
+      <p className="max-w-3xl mx-auto mb-12 text-lg text-center text-gray-600 md:text-left">
         I’m a Software Developer with strong problem-solving skills and hands-on experience in Java-based projects. 
         Enthusiastic about learning new technologies and delivering scalable, efficient solutions.
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+      <div className="grid max-w-5xl grid-cols-2 gap-6 mx-auto md:grid-cols-4 lg:grid-cols-5">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.1, rotate: 3 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="flex flex-col items-center justify-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-transform duration-300 group"
+            className="flex flex-col items-center justify-center p-6 transition-transform duration-300 bg-white shadow-lg rounded-2xl hover:shadow-2xl group"
           >
-            <div className="text-5xl mb-3 group-hover:animate-bounce">{skill.icon}</div>
-            <p className="text-center font-semibold text-gray-800 group-hover:text-indigo-600 transition">{skill.name}</p>
+            <div className="mb-3 text-5xl group-hover:animate-bounce">{skill.icon}</div>
+            <p className="font-semibold text-center text-gray-800 transition group-hover:text-indigo-600">{skill.name}</p>
           </motion.div>
         ))}
       </div>
