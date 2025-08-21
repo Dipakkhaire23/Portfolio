@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-50 to-gray-100 flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-20 py-12">
+    <div className="flex flex-col-reverse items-center justify-center min-h-screen px-6 py-12 bg-gradient-to-r from-gray-50 to-gray-100 md:flex-row md:px-20">
 
       {/* Left Side - Info */}
       <motion.div 
@@ -15,57 +15,57 @@ export default function Home() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        <h1 className="mb-6 text-5xl font-bold text-gray-900 md:text-6xl">
           Hi, I’m <span className="text-indigo-600">Dipak Khaire</span> 👋
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 max-w-xl mb-6 leading-relaxed">
+        <p className="max-w-xl mb-6 text-lg leading-relaxed text-gray-600 md:text-xl">
           <span className="font-semibold">AI & Full-Stack Developer</span> 🚀
           <br /> 
           An enthusiastic Software Developer with proven expertise in Java-based projects and strong problem-solving skills. Passionate about continuous learning and leveraging emerging technologies to build scalable, efficient, and reliable solutions.
         </p>
 
-        <h2 className="text-2xl md:text-3xl font-bold text-indigo-600 mb-6 animate-pulse">
+        <h2 className="mb-6 text-2xl font-bold text-indigo-600 md:text-3xl animate-pulse">
           Open to Internship & Collaborative Projects
         </h2>
 
         {/* Call to Action Buttons */}
-        <div className="flex gap-4 justify-center md:justify-start mb-8">
+        <div className="flex justify-center gap-4 mb-8 md:justify-start">
           <Link
             to="/projects"
-            className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1"
+            className="px-6 py-3 font-medium text-white transition transform bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-700 hover:-translate-y-1"
           >
             View My Work
           </Link>
           <Link
             to="/contact"
-            className="px-6 py-3 border border-indigo-600 text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition transform hover:-translate-y-1"
+            className="px-6 py-3 font-medium text-indigo-600 transition transform border border-indigo-600 rounded-lg hover:bg-indigo-50 hover:-translate-y-1"
           >
             Contact Me
           </Link>
         </div>
 
         {/* Social Links */}
-        <div className="flex gap-6 justify-center md:justify-start">
+        <div className="flex justify-center gap-6 md:justify-start">
           <motion.a
-            href="https://github.com/your-github"
+            href="https://github.com/Dipakkhaire23"
             target="_blank"
             whileHover={{ scale: 1.2 }}
-            className="text-gray-700 hover:text-indigo-600 text-3xl transition"
+            className="text-3xl text-gray-700 transition hover:text-indigo-600"
           >
             <FaGithub />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/your-linkedin"
+            href="https://www.linkedin.com/in/dipak-khaire-1a4227291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             whileHover={{ scale: 1.2 }}
-            className="text-gray-700 hover:text-indigo-600 text-3xl transition"
+            className="text-3xl text-gray-700 transition hover:text-indigo-600"
           >
             <FaLinkedin />
           </motion.a>
           <motion.a
-            href="mailto:your@email.com"
+            href="dipakkhaire23@gmail.com"
             whileHover={{ scale: 1.2 }}
-            className="text-gray-700 hover:text-indigo-600 text-3xl transition"
+            className="text-3xl text-gray-700 transition hover:text-indigo-600"
           >
             <FaEnvelope />
           </motion.a>
@@ -74,7 +74,7 @@ export default function Home() {
 
       {/* Right Side - Profile Image */}
       <motion.div 
-        className="flex-1 flex justify-center mb-8 md:mb-0"
+        className="flex justify-center flex-1 mb-8 md:mb-0"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -82,7 +82,7 @@ export default function Home() {
         <motion.img
           src={dipak}
           alt="Dipak Khaire"
-          className="w-36 h-36 md:w-56 md:h-56 object-cover rounded-full shadow-2xl border-4 border-indigo-600"
+          className="object-cover border-4 border-indigo-600 rounded-full shadow-2xl w-36 h-36 md:w-56 md:h-56"
           whileHover={{ scale: 1.05 }}
         />
       </motion.div>
