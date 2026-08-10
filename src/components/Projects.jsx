@@ -195,9 +195,7 @@ export default function Projects() {
               <h3 className="text-2xl font-bold text-white flex items-center gap-2">
                 All GitHub Repositories
               </h3>
-              <p className="text-xs text-slate-400">
-                Fetched in real-time for <span className="text-emerald-400 font-mono font-semibold">@{username}</span> ({githubRepos.length} public repos)
-              </p>
+             
             </div>
           </div>
 

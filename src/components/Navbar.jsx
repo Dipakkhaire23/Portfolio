@@ -110,7 +110,7 @@ function Navbar() {
                     </div>
                     <div>
                       <h4 className="font-extrabold text-base text-white tracking-wide">Dipak Khaire</h4>
-                      <p className="text-[11px] text-emerald-400 font-mono font-medium">Portfolio Navigation</p>
+                     
                     </div>
                   </div>
 
